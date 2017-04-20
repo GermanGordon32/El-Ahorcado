@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/estilosMenu.css">
+	<title>El Ahorcado</title>
+</head>
+<body>
+	<style type="text/css">
+		#nivel{
+			font-size: 70px;
+			color: darkred;
+			position: fixed;
+			top: 250px;
+			left: 120px;
+		}
+		#puntaje{
+			font-size: 70px;
+			position: fixed;
+			color: darkred;
+			top: 350px;
+			left: 150px;
+		}
+	</style>
+	<audio src="../src/breves_dies_hominis.wav" autoplay loop></audio>
+	<div id="pantalla">
+		<a href="#" onclick="creditos();"><img src="../src/findeljuego.jpg" id="fondo"></a>
+		<div id="nivel">Nivel Alcanzado: 0</div>
+		<div id="puntaje">Tu Puntuacion: 0</div>
+	</div>
+	<script src="../js/datosNivel.js"></script>
+	<script type="text/javascript">
+	var nivel= localStorage.getItem("nivel");
+	var puntaje= localStorage.getItem("puntuacion");
+	nivel = parseInt(nivel) - 1;
+		var nivelAlcanzado = document.getElementById("nivel");
+		nivelAlcanzado.innerHTML = "Nivel Alcanzado: " + nivel;
+		var puntajeAlcanzado = document.getElementById("puntaje");
+		puntajeAlcanzado.innerHTML = "Tu Puntuacion: " + puntuacion;
+		reiniciarDatos();
+		function creditos () {
+			if (nivel >= 10) {
+				reiniciarDatos();
+				var creditos="creditos.html" 
+				location.href=creditos
+			}else{
+				var Menu="index.html" 
+				location.href=Menu
+			}
+		}
+	</script>
+</body>
+</html>

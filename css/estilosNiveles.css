@@ -1,0 +1,61 @@
+body{
+	margin: 0;
+}
+#pantalla{
+	float: left;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: inline-block;
+	width: 800px;
+	height: 600px;
+	
+}
+#fondo{
+	float: left;
+	top: 0;
+	left: 0;
+	position: fixed;
+	display: inline-block;
+	position: absolute;
+	z-index: -1;
+	width: 800px;
+	height: 600px;
+}
+#easterPop{
+	display: none;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+}
+#nivel{
+	position: fixed;
+	top: 40px;
+	left: 40px;
+}
+#puntuacion{
+	position: fixed;
+	color: blue;
+	top: 80px;
+	left: 40px;
+}
+#tema{
+	position: fixed;
+	color: red;
+	top: 50px;
+	left: 600px;
+}
+#intentos{
+	position: fixed;
+	top: 580px;
+	left: 660px;	
+}
+#arbol{
+	position: fixed;
+	background-image: url("../src/Juego/arbol/0.png");
+	background-size: 200px 300px;
+	width: 200px;
+	height: 300px;
+	top: 150px;
+	left: 100px;
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="../css/estilosMenu.css">
+	<title>El Ahorcado</title>
+</head>
+<body>
+	<audio src="../src/Victory.wav" id="myAudio" autoplay></audio>
+	<div id="pantalla">
+		<a href="nivel1.html"><img src="../src/juego/Ganaste.png" id="fondo"></a>
+	</div>
+
+	<script type="text/javascript">
+	var aud = document.getElementById("myAudio");
+	aud.onended = function() {
+			var continuar="nivel1.html" 
+			location.href=continuar
+	};
+	</script>
+</body>
+</html>
